@@ -1,0 +1,67 @@
+import time
+import random
+
+def gen(size):
+    arr=[]
+    for i in range (size):
+        arr.append(random.randint(0,9))
+    
+    return arr
+   
+   
+def find(hayatack, needle):
+    i=0
+    while i<len(hayatack):
+        if hayatack[i]==needlel:
+            return i
+        i+=1
+    return -1
+
+size=1000000
+iter=100
+arr=gen(size)
+arr[0]=10
+arr[size//2]=11
+arr[-1]=12
+
+print('-'*30)
+print('метод index')
+
+start=time.time()
+for i in range(iter):
+    arr.index(10)
+end=(time.time()-start)/iter
+print(f'в начеле:{end}')
+
+start=time.time()
+for i in range(iter):
+    arr.index(11)
+end=(time.time()-start)/iter
+print(f'в середене:{end}')
+
+start=time.time()
+for i in range(iter):
+    arr.index(12)
+end=(time.time()-start)/iter
+print(f'в конце:{end}')
+
+print('-'*30)
+print('наша функция')
+
+start=time.time()
+for i in range(iter):
+    arr.index(10)
+end=(time.time()-start)/iter
+print(f'в начеле:{end}')
+
+start=time.time()
+for i in range(iter):
+    arr.index(11)
+end=(time.time()-start)/iter
+print(f'в середене:{end}')
+
+start=time.time()
+for i in range(iter):
+    arr.index(12)
+end=(time.time()-start)/iter
+print(f'в конце:{end}')
